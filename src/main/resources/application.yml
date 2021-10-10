@@ -1,0 +1,10 @@
+bot:
+  name: skv_demo_bot #${BOT_NAME}
+  token: 1947260124:AAH-Uyfe9Q5MTIORnmrw0g_JREn-cvAq33s #${BOT_TOKEN}
+
+spring:
+  data:
+    mongodb:
+      user: root
+      password: rootpassword
+      uri: mongodb://root:rootpassword@localhost:27017/db
