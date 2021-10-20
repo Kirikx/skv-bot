@@ -1,23 +1,28 @@
 plugins {
-    id 'org.springframework.boot' version '2.5.5' /*apply false*/
-    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+//    id 'org.springframework.boot' version '2.5.5' /*apply false*/
+//    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'application'
+}
+
+application {
+    mainClassName = 'ru.devstend.skvbot.SkvBotApplication'
 }
 
 //dependencyManagement {
 //    imports {
 //        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
-//        mavenBom 'io.projectreactor:reactor-bom:2020.0.11'
+////        mavenBom 'io.projectreactor:reactor-bom:2020.0.11'
 //    }
 //}
 
-jar {
-    enabled = false
-}
+//jar {
+//    enabled = false
+//}
 
 group = 'ru.devstend'
 version = '0.0.1'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 configurations {
     compileOnly {
@@ -33,16 +38,17 @@ dependencies {
     // Load BOM for Spring Boot.
 //    implementation(platform("org.springframework.boot:spring-boot-dependencies:2.5.5"))
 
-    // tg api
-    implementation 'com.github.xabgesagtx:telegram-spring-boot-starter:0.24'
+    implementation 'org.springframework.boot:spring-boot-starter:2.5.5'
+//    implementation 'org.springframework.boot:spring-boot-starter'
 
-//    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb:2.5.5'
-    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
-//    compileOnly 'org.projectlombok:lombok:1.18.20'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.projectlombok:lombok'
-//    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.5'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+//    compileOnly 'org.projectlombok:lombok'
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+//    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.5.5'
+//    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
