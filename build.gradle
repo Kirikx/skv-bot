@@ -37,6 +37,8 @@ repositories {
 dependencies {
     // Load BOM for Spring Boot.
 //    implementation(platform("org.springframework.boot:spring-boot-dependencies:2.5.5"))
+//    annotationProcessor(platform("org.springframework.boot:spring-boot-dependencies:2.5.5"))
+//    compileOnly(platform("org.springframework.boot:spring-boot-dependencies:2.5.5"))
 
     implementation 'org.springframework.boot:spring-boot-starter:2.5.5'
 //    implementation 'org.springframework.boot:spring-boot-starter'
